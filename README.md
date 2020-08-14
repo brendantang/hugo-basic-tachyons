@@ -2,6 +2,8 @@
 
 A boilerplate blog theme for Hugo, using Tachyons.
 
+For an even simpler starting point, see [drybones](https://github.com/brendantang/hugo-drybones).
+
 ## development
 
 `scripts/dev.sh`
