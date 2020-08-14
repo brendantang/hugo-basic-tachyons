@@ -1,16 +1,15 @@
 {{define "main"}}
 
+{{- partial "header.html" . -}} 
+
 <section>{{- .Content -}}</section>
 
-<ul>
-  {{range .Paginator.Pages}}
-    <li>
-      <a href="{{.RelPermalink}}">{{.Title}}</a>
-      {{ .Date.Format "2006-01-02"}} 
-    </li>
-  {{end}}
-</ul>
+<section>
+{{range .Paginator.Pages}}
+    {{ .Render "summary" }}
+{{end}}
+</section>
 
-{{template "_internal/pagination.html" .}}
+{{partial "pagination" .}}
 
 {{end}}

@@ -1,0 +1,32 @@
+<!-- adapted from hugo source -->
+{{ $pag := $.Paginator }}
+{{ if gt $pag.TotalPages 1 -}}
+<nav class="pagination flex justify-center bt mt4">
+  {{ with $pag.First -}}
+  <a href="{{ .URL }}#notes" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+  {{ end -}}
+  <a {{ if $pag.HasPrev }}href="{{ $pag.Prev.URL }}#notes"{{ end }} class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+  {{- $ellipsed := false -}}
+  {{- $shouldEllipse := false -}}
+  {{- range $pag.Pagers -}}
+  {{- $right := sub .TotalPages .PageNumber -}}
+  {{- $showNumber := or (eq .TotalPages 5) (le .PageNumber 3) (eq $right 0) -}}
+  {{- if $showNumber -}}
+    {{- $ellipsed = false -}}
+    {{- $shouldEllipse = false -}}
+  {{- else -}}
+    {{- $shouldEllipse = not $ellipsed -}}
+    {{- $ellipsed = true -}}
+  {{- end -}}
+  {{- if $showNumber }}
+  <a class="page-link" href="{{ .URL }}#notes">{{ .PageNumber }}</a>
+  {{- else if $shouldEllipse }}
+  <span aria-hidden="true">&nbsp;&hellip;&nbsp;</span>
+  {{- end -}}
+  {{- end }}
+  <a {{ if $pag.HasNext }}href="{{ $pag.Next.URL }}#notes"{{ end }} class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+  {{- with $pag.Last }}
+  <a href="{{ .URL }}#notes" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+  {{- end }}
+</nav>
+{{ end }}

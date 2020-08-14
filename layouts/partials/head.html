@@ -2,4 +2,7 @@
   <meta charset="utf-8">
   <title>{{site.Title}}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  {{ $options := (dict "outputStyle" "compressed" "includePaths" (slice "node_modules/tachyons/css" "assets/styles")) }}
+  {{ $style := resources.Get "styles/base.scss" | toCSS $options | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
 </head>

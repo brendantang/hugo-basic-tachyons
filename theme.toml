@@ -1,10 +1,10 @@
-description = "bare, markup-only scaffold for a blog theme"
+description = "minimal boilerplate theme with tachyons"
 features    = []
 homepage    = "https://github.com/brendantang/hugo-drybones"
 license     = "MIT"
 licenselink = "https://github.com/brendantang/hugo-drybones/blob/master/LICENSE"
 min_version = "0.65.0"
-name        = "drybones"
+name        = "basic-tachyons"
 tags        = ["blog", "simple"]
 
 [author]

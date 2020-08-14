@@ -6,7 +6,7 @@ git submodule update --recursive --init
 cd example-site
 hugo server -D \
 --disableFastRender \
---theme drybones \
+--theme basic-tachyons \
 --themesDir ../../ \
 --config config.toml,../config.example.toml \
 --verbose

@@ -1,0 +1,12 @@
+{
+  "name": "basic-tachyons",
+  "version": "1.0.0",
+  "main": "na",
+  "repository": "/Users/brendan/code/hugo/drybones",
+  "author": "Brendan Tang <b@brendantang.net>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "tachyons": "^4.12.0"
+  }
+}
