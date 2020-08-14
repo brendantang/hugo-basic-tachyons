@@ -1,5 +1,6 @@
 {{ if .Params.tags }}
-  <ul class="ma0 pl0 pv1 list flex flex-row">
+  <ul title="tags" class="ma0 pl0 pv1 list flex flex-row">
+    <li class=" mr1">tags:</lh>
     {{range (.GetTerms "tags")}}
     <li class="mr1"><a href="{{.RelPermalink}}">{{.LinkTitle}}</a></li>
     {{end}}

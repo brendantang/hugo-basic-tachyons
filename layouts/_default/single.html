@@ -1,36 +1,26 @@
 {{define "main"}}
-<a class="f6 bb" href="/">{{.Site.Title}}</a>
+<a class="f5 bb" href="/">{{.Site.Title}} ⤴</a>
 
 <header class="lh-title">
-  <h1 class="f1 mb2">{{.Title}}</h1>
+  <a href="{{.Permalink}}">
+    <h1 class="f1 mb2">{{.Title}}</h1>
+  </a>
   <div class="lh-solid f6">
-    <date>{{.Date}}</date>
+    <date>{{.Date.Format "2006-01-02"}}</date>
     {{ .Render "tags" }}
   </div>
 </header>
 
-<main class="mv3"> {{.Content}} </main>
+<main class="mt2 mb6"> {{.Content}} </main>
 
-<section class="order-last bt" id="menu">
-  <h3> table of contents </h3>
-  {{.TableOfContents}}
-
-  <div>
+<section class="bt" id="menu">
+  <div class="flex flex-row justify-between">
     {{with .PrevInSection}}<a href="{{.RelPermalink}}">← {{.Title}}</a>{{end}}
+    <a href="#content">top ⬆</a>
     {{with .NextInSection}}<a href="{{.RelPermalink}}">{{.Title}} →</a>{{end}}
+  </div> 
+  <div class="">
   </div>
-
-  {{$related := .Site.RegularPages.Related . | first 5}}
-  {{with $related}}
-  <div>
-    <h3>related</h3>
-    <ul>
-      {{range .}}
-      <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-      {{end}}
-    </ul>
-  </div>
-  {{end}}
 </section>
 
 {{end}}

@@ -1,5 +1,5 @@
 baseURL = "https://leveler.xyz"
-theme   = "drybones"
+theme   = "basic-tachyons"
 title   = "Example site"
 
 [Params]

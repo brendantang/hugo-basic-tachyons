@@ -1,11 +1,11 @@
 description = "minimal boilerplate theme with tachyons"
 features    = []
-homepage    = "https://github.com/brendantang/hugo-drybones"
+homepage    = "https://github.com/brendantang/hugo-basic-tachyons"
 license     = "MIT"
-licenselink = "https://github.com/brendantang/hugo-drybones/blob/master/LICENSE"
+licenselink = "https://github.com/brendantang/hugo-basic-tachyons/blob/master/LICENSE"
 min_version = "0.65.0"
 name        = "basic-tachyons"
-tags        = ["blog", "simple"]
+tags        = ["blog", "simple", "tachyons"]
 
 [author]
 homepage = "https://brendantang.net/"

@@ -1,6 +1,6 @@
-# hugo-drybones
+# basic-tachyons
 
-scaffold for a hugo theme with nothing but semantic markup
+A boilerplate blog theme for Hugo, using Tachyons.
 
 ## development
 
@@ -11,7 +11,7 @@ scaffold for a hugo theme with nothing but semantic markup
 ~~~sh
 cd /path/to/your/hugo/site
 mkdir themes #if necessary
-git submodule add https://github.com/brendantang/hugo-drybones themes/drybones
+git submodule add https://github.com/brendantang/hugo-basic-tachyons themes/basic-tachyons
 ~~~
 
-Add `theme = "drybones"` to `config.toml` 
+Add `theme = "basic-tachyons"` to `config.toml` 
