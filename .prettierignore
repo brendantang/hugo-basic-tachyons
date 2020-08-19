@@ -1,0 +1,8 @@
+node_modules
+assets
+example-site
+content
+yarn-error.log
+
+# prettier can break Go html templates
+*.html

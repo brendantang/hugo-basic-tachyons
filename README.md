@@ -10,10 +10,10 @@ For an even simpler starting point, see [drybones](https://github.com/brendantan
 
 ## usage
 
-~~~sh
+```sh
 cd /path/to/your/hugo/site
 mkdir themes #if necessary
 git submodule add https://github.com/brendantang/hugo-basic-tachyons themes/basic-tachyons
-~~~
+```
 
-Add `theme = "basic-tachyons"` to `config.toml` 
+Add `theme = "basic-tachyons"` to `config.toml`

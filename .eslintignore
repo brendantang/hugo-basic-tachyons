@@ -1,0 +1,6 @@
+example-site
+assets
+node_modules
+content
+yarn-error.log
+*.config.js
