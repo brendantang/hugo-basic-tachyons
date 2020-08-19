@@ -8,5 +8,9 @@
   "private": true,
   "devDependencies": {
     "tachyons": "^4.12.0"
+  },
+  "scripts": {
+    "submodules": "git submodule update --recursive --init",
+    "dev": "cd example-site && hugo server -D -v --disableFastRender -t basic-tachyons --themesDir ../../ --config config.toml,../config.example.toml"
   }
 }
