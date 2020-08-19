@@ -6,16 +6,24 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "eslint": "^7.7.0",
     "prettier": "^2.0.5",
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "^20.0.0",
-    "tachyons": "^4.12.0"
+    "tachyons": "^4.12.0",
+    "turbolinks": "^5.2.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "submodules": "git submodule update --recursive --init",
-    "dev": "cd example-site && hugo server -D -v --disableFastRender -t basic-tachyons --themesDir ../../ --config config.toml,../config.example.toml",
+    "serve": "cd example-site && hugo server -D -v --disableFastRender -t basic-tachyons --themesDir ../../ --config config.toml,../config.example.toml",
     "lint": "stylelint \"assets/styles/*\" && eslint .",
-    "format": "prettier . --write"
+    "format": "prettier . --write",
+    "webpack": "webpack",
+    "webpack-watch": "webpack --watch",
+    "submodules": "git submodule update --recursive --init",
+    "build": "yarn submodules && yarn webpack",
+    "dev": "concurrently --kill-others \"yarn webpack-watch\" \"yarn serve\""
   }
 }
