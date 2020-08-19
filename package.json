@@ -1,8 +1,7 @@
 {
-  "name": "basic-tachyons",
-  "version": "1.0.0",
-  "main": "na",
-  "repository": "/Users/brendan/code/hugo/drybones",
+  "name": "hugo-basic-tachyons",
+  "version": "1.1.0",
+  "repository": "https://github.com/brendantang/hugo-basic-tachyons",
   "author": "Brendan Tang <b@brendantang.net>",
   "license": "MIT",
   "private": true,
